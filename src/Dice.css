@@ -1,0 +1,104 @@
+/* @media (prefers-reduced-motion: no-preference) {
+    .mydice1 {
+      animation: mydice1-spin 10s  linear;
+    }
+  }
+
+  @keyframes mydice1-spin {
+    from {
+      transform: rotate(5deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+@media (prefers-reduced-motion: no-preference) {
+    .mydice2 {
+      animation: mydice2-spin 10s  linear;
+    }
+  }
+
+  @keyframes mydice2-spin {
+    from {
+      transform: rotate(5deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  } */
+
+
+  .mydice1,.mydice2{
+    animation-name:wobble;
+    animation-duration: 10s;
+  }
+    
+  /* Setting Animation effect to the 
+     dice using css keyframe */
+  @keyframes wobble {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    15% {
+      transform: translate3d(-25%, 0, 0) 
+                 rotate3d(0, 0, 1, -5deg);
+    }
+    30% {
+      transform: translate3d(20%, 0, 0) 
+                 rotate3d(0, 0, 1, 3deg);
+    }
+    45% {
+      transform: translate3d(-15%, 0, 0)
+                 rotate3d(0, 0, 1, -3deg);
+    }
+    60% {
+      transform: translate3d(10%, 0, 0) 
+                 rotate3d(0, 0, 1, 2deg);
+    }
+    75% {
+      transform: translate3d(-5%, 0, 0) 
+                 rotate3d(0, 0, 1, -1deg);
+    }
+    to {
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+
+  .playdice{
+    background-color: none;
+    border: none;
+  }
+
+  .playdice:hover{
+    cursor: pointer;
+    color: red;
+  }
+    
+
+  .bodyWrapper{
+    background-color: #0356fc38;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+
+  .dicewrapper{
+      width: 30%;
+      height: 20vh;
+      flex-direction: column;
+      margin: auto;
+      background-color: none;
+
+  }
+  .mydice1{
+    cursor: pointer;
+  }
+  .mydice2{
+    cursor: pointer;
+  }
